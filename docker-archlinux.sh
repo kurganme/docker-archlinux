@@ -3,7 +3,7 @@ set -ue
 
 # MIRROR='https://mirrors.kernel.org/archlinux'
 MIRROR='https://mirror.f4st.host/archlinux'
-ISO_VER='2016.12.01'
+ISO_VER='2017.02.01'
 NAME="vpalazzo/archlinux"
 
 ENTRYPOINT='#!/bin/sh
@@ -41,7 +41,7 @@ CMD [ "/usr/bin/bash", "-l" ]
 '
 
 DOCKERFILE_BUILDER='
-FROM alpine:3.4
+FROM alpine:3.5
 
 RUN apk --update add curl
 
