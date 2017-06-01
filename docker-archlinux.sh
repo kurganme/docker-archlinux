@@ -3,7 +3,7 @@ set -ue
 
 # MIRROR='https://mirrors.kernel.org/archlinux'
 MIRROR='https://mirror.f4st.host/archlinux'
-ISO_VER='2017.02.01'
+ISO_VER='2017.03.01'
 NAME="vpalazzo/archlinux"
 
 ENTRYPOINT='#!/bin/sh
@@ -22,6 +22,7 @@ RUN \
     ln -nfs /usr/share/zoneinfo/Europe/Rome /etc/localtime &&\
     echo "en_US.UTF-8 UTF-8" >/etc/locale.gen &&\
     echo "LANG=en_US.UTF-8" >/etc/locale.conf &&\
+    rm /etc/ssl/certs/ca-certificates.crt &&\
     pacman-key --init &&\
     pacman-key --populate archlinux &&\
     echo "Server = http://mirror.f4st.host/archlinux/\$repo/os/\$arch" \
