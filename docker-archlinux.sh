@@ -29,7 +29,7 @@ RUN \
     echo "Server = http://mirror.f4st.host/archlinux/\$repo/os/\$arch" \
          >/etc/pacman.d/mirrorlist &&\
     pacman --noconfirm -Sy sed gzip &&\
-    pacman --noconfirm -Su &&\
+    pacman --noconfirm -Su ca-certificates-utils &&\
     sed -i~ '"'"'/^#\[multilib\]$/{s/^#//;n;s/^#//}'"'"' /etc/pacman.conf &&\
     pacman --noconfirm -Sy
 
