@@ -3,7 +3,7 @@ set -uex
 
 # MIRROR='https://mirrors.kernel.org/archlinux'
 MIRROR='https://mirror.f4st.host/archlinux'
-ISO_VER='2017.05.01'
+ISO_VER='2017.11.01'
 NAME="vpalazzo/archlinux"
 
 ENTRYPOINT='#!/bin/sh
