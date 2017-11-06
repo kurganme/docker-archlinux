@@ -50,7 +50,7 @@ RUN apk --update add curl
 
 RUN \
     mkdir /root/src/ &&\
-    curl '"'${MIRROR}/iso/${ISO_VER}/`
+    curl -L '"'${MIRROR}/iso/${ISO_VER}/`
            `archlinux-bootstrap-${ISO_VER}-x86_64.tar.gz'"' \
         | tar xzC /root/src/
 
